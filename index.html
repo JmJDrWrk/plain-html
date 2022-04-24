@@ -8,9 +8,21 @@
     <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-    <button onclick="salute()">Hola mundo</button>
+    <!-- <button onclick="salute()">Hola mundo</button> -->
+    <button onclick="read()">Read Fetch</button>
+    <textarea name="nan" id="nan" cols="30" rows="10"></textarea>
 </body>
+<script>
 
+    function continueHere(){
+        console.log('text: ' + data.get('storagetext'))
+        document.getElementById('nan').innerText = data.get('storagetext')
+    }
+
+    function read(){
+        fetchreadbymapkey('storage.txt','storagetext','continueHere')
+    }
+</script>
 <script src="./index.js"></script>
-
+<script src="./read_fetch.js"></script>
 </html>
