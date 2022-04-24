@@ -10,16 +10,24 @@
 <body>
     <!-- <button onclick="salute()">Hola mundo</button> -->
     <button onclick="read()">Read Fetch</button>
+    <input type="text" placeholder='la fecha en la que nos conocimos todo junto' id='datedate'>
     <textarea name="nan" id="nan" cols="30" rows="10"></textarea>
 </body>
 <script>
 
     function continueHere(){
-        console.log('text: ' + data.get('storagetext'))
-        document.getElementById('nan').innerText = data.get('storagetext')
+        console.log('text: ' + data.get('key'))
+        //document.getElementById('nan').innerText = data.get('storagetext')
+
+        if(data.get('key')==document.getElementById('datedate').value){
+            document.getElementById('nan').innerText = data.get('storagetext')
+        }else{
+            console.log('error')
+        }
     }
 
     function read(){
+        fetchreadbymapkey('key.key','key',null)
         fetchreadbymapkey('storage.txt','storagetext','continueHere')
     }
 </script>

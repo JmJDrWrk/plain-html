@@ -1,9 +1,9 @@
 button {
-    position: absolute;
+    /* position: absolute;
     top: 40%;
     bottom: 55; 
     right: 45%;
-    left: 45%;
+    left: 45%; */
     background-color: #fafafa;
     margin: 1rem;
     padding: 1rem;
@@ -11,4 +11,8 @@ button {
     /* IMPORTANTE */
     text-align: center;
 
+}
+
+input {
+    width: 600px;
 }
